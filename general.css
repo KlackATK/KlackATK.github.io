@@ -1,0 +1,556 @@
+/*----- Start Custom Properties -----*/
+:root {
+	/* colors */
+	--clr-ltgrn: 202, 255, 208;
+	/* #caffd0 */
+	--clr-grn: 53, 114, 102;
+	/* #357266 */
+	--clr-dkgrn: 14, 59, 67;
+	/* #0e3b43 */
+	--clr-ylw: 255, 186, 73;
+	/* #ffba49 */
+	--clr-red: 85, 37, 29;
+	/* #55251d */
+	--clr-wht: 255, 255, 255;
+	/* ffffff */
+	--main-clr: var(--clr-dkgrn);
+	--outline-clr: var(--clr-ltgrn);
+
+	/* font sizes */
+	--fs-900: 9.375rem;
+	--fs-800: 6.25rem;
+	--fs-700: 3.5rem;
+	--fs-600: 2rem;
+	--fs-500: 1.75rem;
+	--fs-400: 1.125rem;
+	--fs-300: 1rem;
+	--fs-200: 0.875rem;
+
+	/* font families */
+	--ff-serif: "Baskerville", serif;
+	--ff-sans-cond: "Roboto Condensed", sans-serif;
+	--ff-sans-reg: "Roboto", sans-serif;
+
+}
+
+/*----- End Custom Properties -----*/
+
+
+/*----- Begin Reset -----*/
+
+/* including padding & margins in measurements */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* resetting margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+	margin: 0;
+}
+
+/* removing bold from headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: 400;
+}
+
+/* setting defaults for body */
+body {
+	font-family: var(--ff-sans-reg);
+	font-size: var(--fs-400);
+	background-color: rgb(var(--clr-ltgrn));
+	color: rgb(var(--clr-dkgrn));
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+/* making images dynamic */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* making form elements cohesive with content */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* reduce animations option */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/*----- End Reset -----*/
+
+/*----- General Utility Classes -----*/
+
+/* "* + *" <-- denotes a selector check, selecting anything that has a sibling element before itself */
+/* Will not work on the first element in a group, including lone elements.*/
+.flow>*+* {
+	margin-top: var(--flow-space, 1rem);
+	outline: 1px solid red;
+}
+
+/* flexbox class */
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+/* gridbox class */
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+/* container class */
+.container {
+	padding-inline: 2em;
+	margin-inline: auto;
+	max-width: 80rem;
+}
+
+/* class for screen-reader/accessability*/
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/*----- End Utility Classes -----*/
+
+
+
+/*----- Start Custom Colors -----*/
+.bg-ltgrn {
+	background-color: rgb(var(--clr-ltgrn));
+}
+
+.bg-grn {
+	background-color: rgb(var(--clr-grn));
+}
+
+.bg-dkgrn {
+	background-color: rgb(var(--clr-dkgrn));
+}
+
+.bg-ylw {
+	background-color: rgb(var(--clr-ylw));
+}
+
+.bg-red {
+	background-color: rgb(var(--clr-red));
+}
+
+.bg-wht {
+	background-color: rgb(var(--clr-wht));
+}
+
+.font-ltgrn {
+	color: rgb(var(--clr-ltgrn));
+}
+
+.font-grn {
+	color: rgb(var(--clr-grn));
+}
+
+.font-dkgrn {
+	color: rgb(var(--clr-dkgrn));
+}
+
+.font-ylw {
+	color: rgb(var(--clr-ylw));
+}
+
+.font-red {
+	color: rgb(var(--clr-red));
+}
+
+.font-wht {
+	color: rgb(var(--clr-wht));
+}
+
+.bdr-ltgrn {
+	border: 0.5rem solid rgb(var(--clr-ltgrn));
+	border-radius: 0.5rem;
+}
+
+.bdr-grn {
+	border: 0.5rem solid rgb(var(--clr-grn));
+	border-radius: 0.5rem;
+}
+
+.bdr-dkgrn {
+	border: 0.5rem solid rgb(var(--clr-dkgrn));
+	border-radius: 0.5rem;
+}
+
+.bdr-ylw {
+	border: 0.5rem solid rgb(var(--clr-ylw));
+	border-radius: 0.5rem;
+}
+
+.bdr-red {
+	border: 0.5rem solid rgb(var(--clr-red));
+	border-radius: 0.5rem;
+}
+
+.bdr-wht {
+	border: 0.5rem solid rgb(var(--clr-wht));
+	border-radius: 0.5rem;
+}
+
+/*----- End Custom Colors -----*/
+
+/*----- Begin Typography -----*/
+
+.ff-serif {
+	font-family: var(--ff-serif);
+}
+
+.ff-sans-cond {
+	font-family: var(--ff-sans-cond);
+}
+
+.ff-sans-reg {
+	font-family: var(--ff-sans-reg);
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.fs-900 {
+	font-size: var(--fs-900);
+}
+
+.fs-800 {
+	font-size: var(--fs-800);
+}
+
+.fs-700 {
+	font-size: var(--fs-700);
+}
+
+.fs-600 {
+	font-size: var(--fs-600);
+}
+
+.fs-500 {
+	font-size: var(--fs-500);
+}
+
+.fs-400 {
+	font-size: var(--fs-400);
+}
+
+.fs-300 {
+	font-size: var(--fs-300);
+}
+
+.fs-200 {
+	font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+	line-height: 1.1;
+}
+
+/*----- End Typography -----*/
+
+.section {
+	margin-top: 2rem;
+	position: relative;
+	border: 0.5rem solid rgb(var(--clr-grn));
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.section-2 {
+	margin-top: 2rem;
+	position: relative;
+	border: 0.5rem solid rgb(var(--clr-ltgrn));
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.section-2 ::after {
+	content: " ";
+	position: absolute;
+	top: -0.75rem;
+	left: -0.75rem;
+	right: -0.75rem;
+	bottom: -0.75rem;
+	border: 0.25rem solid rgb(var(--clr-dkgrn));
+	border-radius: 0.25rem;
+	pointer-events: none;
+}
+
+.section ::after {
+	content: " ";
+	position: absolute;
+	top: -0.75rem;
+	left: -0.75rem;
+	right: -0.75rem;
+	bottom: -0.75rem;
+	border: 0.25rem solid rgb(var(--clr-dkgrn));
+	border-radius: 0.25rem;
+	pointer-events: none;
+}
+
+.row {
+	display: grid;
+	width:100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column: 1 / -1;
+}
+
+.row-2 {
+	display: grid;
+	grid-column: span 2;
+	grid-template-columns: repeat(auto-fit, minmax(82px, auto));
+	place-items: center stretch;
+	column-gap: 1rem;
+}
+
+.row-cent {
+	grid-column-start: 2;
+}
+
+
+.row-2 img {
+	max-height: 100%;
+}
+
+.section-break {
+	width: 50%;
+	border: 0.125rem solid rgb(var(--clr-grn));
+}
+
+.section-break-wht {
+	width: 50%;
+	border: 0.125rem solid rgb(var(--clr-wht));
+}
+
+.section-break.name {
+	margin-inline-start: 0;
+	width: 45%;
+}
+
+.cell {
+	align-content: start;
+	grid-column: span 2;
+}
+
+.cell-cent {
+	align-content: start;
+	grid-column: 2 / span 2;
+}
+
+
+.cell-para {
+	padding-right: 2rem;
+}
+
+.txt-cent {
+	text-align: center;
+}
+
+.navMenu {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	width: 20rem;
+	height: 80%;
+	z-index: 11;
+	margin-right: 2rem;
+	gap: 0 0.5rem;
+
+}
+
+.navBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-width: 6rem;
+	height: 75%;
+	align-self: center;
+	border: 0.25rem solid rgb(var(--clr-ltgrn));
+	border-radius: 2rem;
+	text-align: center;
+}
+
+.navBtn a {
+	font-size: var(--fs-500);
+}
+
+@media all and (max-width: 1050px) {
+	.row {
+		grid-template-columns: 1fr;
+		padding-top: 2rem;
+	}
+
+	.section-header {
+		grid-column: span 1;
+		margin: 2rem;
+	}
+
+	.section h1,
+	h2,
+	h4 {
+		text-align: center;
+	}
+
+	.cell {
+		grid-column: 1 / -1;
+	}
+
+	.cell-cent {
+		align-content: start;
+		grid-column: 1 / -1;
+	}
+
+	.cell-para {
+		padding-right: 0rem;
+	}
+
+	.section p {
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.section-break.name {
+		margin-inline-start: auto;
+	}
+
+	.navMenu {
+		width: 12rem;
+		gap: 0 0.5rem;
+	}
+
+	.navBtn a {
+		font-size: var(--fs-400);
+	}
+}
+
+.section-header {
+	grid-column: span 4;
+	margin:2rem 2rem 0 2rem;
+}
+
+.moth-wrapper {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%) rotate(0deg);
+	pointer-events: none;
+	z-index: 999;
+}
+
+.moth {
+	position: fixed;
+	pointer-events: none;
+	z-index: 999;
+	filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+	width: 100%;
+	height: 100%;
+	animation: wing-flap 1s ease-in-out infinite;
+	transform-origin: center;
+}
+
+.moth svg {
+	width: 100%;
+	height: 100%;
+	fill: #bdecb6;
+	stroke: rgb(var(--clr-dkgrn));
+	stroke-width: 20px;
+	z-index: 999;
+	pointer-events: none;
+}
+
+@keyframes wing-flap {
+
+	0%,
+	100% {
+		transform: scaleX(1);
+	}
+
+	50% {
+		transform: scaleX(0.2);
+	}
+}
+
+#orbitTarget {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+#header-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 12.25rem;
+	transition: 0.4s;
+	z-index: 10;
+}
+
+#header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	height: 12rem;
+	transition: 0.4s;
+	z-index: 10;
+}
+
+#home-logo {
+	transition: 0.4s;
+}
+
+#buffer {
+	transition: 0.4s;
+}
