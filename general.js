@@ -56,8 +56,8 @@ function initMothTrail() {
 	}
 
 	document.addEventListener("mousemove", (e) => {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
     lastMoveTime = Date.now();
     idle = false;
   });
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Track the real mouse position
 	document.addEventListener('mousemove', (e) => {
-		mouseX = e.pageX;
-		mouseY = e.pageY;
+		mouseX = e.clientX;
+		mouseY = e.clientY;
 		lastMoveTime = Date.now();
 		idle = false;
 		currentOrbitRadius = 0;
@@ -197,8 +197,5 @@ document.addEventListener("DOMContentLoaded", () => {
 				initMothTrail();
 			}
 		}
-		
-		
-
 	});
 });
