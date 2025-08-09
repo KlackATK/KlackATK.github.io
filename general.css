@@ -95,6 +95,10 @@ select {
 	font: inherit;
 }
 
+a {
+	text-decoration:none;
+}
+
 /* reduce animations option */
 @media (prefers-reduced-motion: reduce) {
 
@@ -605,3 +609,4 @@ select {
 #buffer {
 	transition: 0.4s;
 }
+
