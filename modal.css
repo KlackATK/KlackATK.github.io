@@ -4,7 +4,9 @@
   transition: 0.3s;
 }
 
-.modalImg:hover {opacity: 0.7;}
+.modalImg:hover {
+    transform: scale(1.05);
+}
 
 .modal {
   display: none; /* Hidden by default */

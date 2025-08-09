@@ -4,6 +4,7 @@
 <head>
 	<title>Maya Toole - About Me</title>
 	<link href="general.css" rel="stylesheet" type="text/css">
+	<link href="modal.css" rel="stylesheet" type="text/css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -12,6 +13,7 @@
 	<link rel="icon" type="image/x-icon" href="/images/moth-ico.png">
 	<script src="general.js"></script>
 	<script src="header.js"></script>
+	<script src="modal.js"></script>
 </head>
 
 <body class="bg-wht">
@@ -25,11 +27,21 @@
 				</a>
 			</div>
 			<div id="navMenu" class="navMenu">
+				<div class="navRow">
+					<div id="contact" class="navBtn bg-dkgrn font-wht ff-sans-cond" style="height:100%">
+						<p class="font-wht ff-sans-cond fs-300">Contact Me</p>
+						<img class="modalImg" data-target="contactModal"
+							style="position:absolute;height:100%;width:100%;opacity:0;">
+					</div>
+					<div id="reduceAnimations" class="navBtn bg-dkgrn font-wht" style="height:100%">
+						<p class="font-wht ff-sans-cond fs-300">I/O Animations</p>
+					</div>
+				</div>
 				<div id="works" class="navBtn bg-dkgrn bdr-dkgrn">
 					<a href="works.html" class="font-wht">Works</a>
 				</div>
 				<div id="aboutMe" class="navBtn bg-dkgrn bdr-dkgrn">
-					<a href="about.html" class="font-wht">About Me</a>
+					<a href="about.html" class="font-wht">About</a>
 				</div>
 			</div>
 		</div>
@@ -38,6 +50,30 @@
 		<div class="bg-dkgrn" style="height:0.25rem; width:100%;"></div>
 	</header>
 	<div id="buffer" style="height:12.25rem;"></div>
+
+	<div id="contactModal" class="modal">
+		<span class="close">&times;</span>
+		<div class="modal-content" style="display:flex;align-items:center;">
+			<div class="mc-row">
+				<img src="images/moth-1.png">
+				<div class="contactInfo">
+					<div>
+						<p class="font-wht fs-700">Maya Toole</p>
+						<hr class="section-break name">
+					</div>
+					<a class="imgBtn" href="https://www.linkedin.com/in/maya-toole-6baa64374/">
+						<img src="images/icons/LinkedIn.png" style="height:12.425rem;">
+					</a>
+					<a class="imgBtn" href="https://www.instagram.com/mayactoole?igsh=bW5hcXQxZTFuMGkz&utm_source=qr">
+						<img src="images/icons/Instagram_Glyph_Gradient.png" style="height:12.425rem;">
+					</a>
+					<a class="imgBtn" href="mailto:maya.toole@yahoo.com">
+						<img src="images/icons/Email-Icon.png" style="height:12.425rem;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container" style="margin-bottom:4rem;">
 		<div class="section">
@@ -50,17 +86,18 @@
 			<div class="row">
 				<div class="cell" style="display:grid;justify-content:center;">
 					<img src="images/moth-1.png" style="align-self:center;padding:0 2rem 1rem 2rem;max-width:100%;">
-					<div style="display:grid;grid-template-columns: repeat(3, fit-content(48px));gap:1rem; width:80%;justify-self:center;justify-content:center;align-items:center;margin-bottom:2rem;">
-						<a href="https://www.linkedin.com/in/maya-toole-6baa64374/">
+					<div
+						style="display:grid;grid-template-columns: repeat(3, fit-content(48px));gap:1rem; width:80%;justify-self:center;justify-content:center;align-items:center;margin-bottom:2rem;">
+						<a class="imgBtn" href="https://www.linkedin.com/in/maya-toole-6baa64374/">
 							<img src="images/icons/LinkedIn.png" style="height:3rem;">
 						</a>
-						<a href="https://www.instagram.com/mayactoole?igsh=bW5hcXQxZTFuMGkz&utm_source=qr">
+						<a class="imgBtn" href="https://www.instagram.com/mayactoole?igsh=bW5hcXQxZTFuMGkz&utm_source=qr">
 							<img src="images/icons/Instagram_Glyph_Gradient.png" style="height:3rem;">
 						</a>
-						<a href="mailto:maya.toole@yahoo.com">
+						<a class="imgBtn" href="mailto:maya.toole@yahoo.com">
 							<img src="images/icons/Email-Icon.png" style="height:2rem;margin-right:1rem;">
 						</a>
-						</div>
+					</div>
 				</div>
 				<div class="cell">
 					<h2 class="font-dkgrn ff-sans-reg fs-500">
@@ -190,11 +227,13 @@
 		</div>
 	</div>
 
-<footer class="bg-dkgrn">
+	<footer class="bg-dkgrn">
 		<div class="container" style="padding:1rem 0;display:grid;">
-			<div style="display:grid;grid-template-columns:fit-content(220px) 1fr;width:30%;justify-self:center;justify-content: center;">
+			<div
+				style="display:grid;grid-template-columns:fit-content(220px) 1fr;width:30%;justify-self:center;justify-content: center;">
 				<p class="font-wht txt-cent" style="align-self:center;">Maya Toole - Created 2025</p>
-				<a href="https://www.linkedin.com/in/maya-toole-6baa64374/" style="display:grid;justify-content:center;">
+				<a href="https://www.linkedin.com/in/maya-toole-6baa64374/"
+					style="display:grid;justify-content:center;">
 					<img src="images/icons/LinkedIn.png" style="height:4rem;">
 				</a>
 			</div>

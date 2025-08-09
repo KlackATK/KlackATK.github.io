@@ -14,7 +14,6 @@
 	<script src="general.js"></script>
 	<script src="header.js"></script>
 	<script src="modal.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="bg-wht">
@@ -28,11 +27,21 @@
 				</a>
 			</div>
 			<div id="navMenu" class="navMenu">
+				<div class="navRow">
+					<div id="contact" class="navBtn bg-dkgrn font-wht ff-sans-cond" style="height:100%">
+						<p class="font-wht ff-sans-cond fs-300">Contact Me</p>
+						<img class="modalImg" data-target="contactModal"
+							style="position:absolute;height:100%;width:100%;opacity:0;">
+					</div>
+					<div id="reduceAnimations" class="navBtn bg-dkgrn font-wht" style="height:100%">
+						<p class="font-wht ff-sans-cond fs-300">I/O Animations</p>
+					</div>
+				</div>
 				<div id="works" class="navBtn bg-dkgrn bdr-dkgrn fs-500">
 					<a href="works.html" class="font-wht">Works</a>
 				</div>
 				<div id="aboutMe" class="navBtn bg-dkgrn bdr-dkgrn fs-500">
-					<a href="about.html" class="font-wht">About Me</a>
+					<a href="about.html" class="font-wht">About</a>
 				</div>
 			</div>
 		</div>
@@ -42,6 +51,29 @@
 	</header>
 	<div id="buffer" style="height:12.25rem;"></div>
 
+	<div id="contactModal" class="modal">
+		<span class="close">&times;</span>
+		<div class="modal-content" style="display:flex;align-items:center;">
+			<div class="mc-row">
+				<img src="images/moth-1.png">
+				<div class="contactInfo">
+					<div>
+						<p class="font-wht fs-700">Maya Toole</p>
+						<hr class="section-break name">
+					</div>
+					<a class="imgBtn" href="https://www.linkedin.com/in/maya-toole-6baa64374/">
+						<img src="images/icons/LinkedIn.png" style="height:12.425rem;">
+					</a>
+					<a class="imgBtn" href="https://www.instagram.com/mayactoole?igsh=bW5hcXQxZTFuMGkz&utm_source=qr">
+						<img src="images/icons/Instagram_Glyph_Gradient.png" style="height:12.425rem;">
+					</a>
+					<a class="imgBtn" href="mailto:maya.toole@yahoo.com">
+						<img src="images/icons/Email-Icon.png" style="height:12.425rem;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="xmasModal" class="modal">
 		<span class="close">&times;</span>
 		<div class="modal-content">
@@ -184,13 +216,14 @@
 					<p class="fs-300">
 						Most designs from Pace Monogramming were created and edited with the Screen
 						Printing and Direct to Film(DTF) in mind, where limitations in each process required creative
-						solutions to keep with customer demands. I worked on 2,600+ designs during my time here, but here are just a few.
+						solutions to keep with customer demands. I worked on 2,600+ designs during my time here, but
+						here are just a few.
 					</p>
 				</div>
 				<div class="cell" style="display:grid;justify-items:center;">
 					<div style="display:flex;justify-content:center;align-content:center;">
 						<img class="modalImg" data-target="pmspModal" src="images/PM&SP/Tate-Cherry-Blossom.jpg"
-							style="padding:2rem;height:30rem;">
+							style="padding:2rem;height:28rem;">
 					</div>
 				</div>
 				<div class="cell">
@@ -210,8 +243,8 @@
 				</div>
 				<div class="cell" style="display:grid;justify-items:center;">
 					<div style="display:flex;justify-content:center;align-content:center;">
-						<img class="modalImg" data-target="fireflyModal" src="images/Firefly/Coastal-Seamless-Gutters.jpg"
-							style="padding:2rem;width:30rem;">
+						<img class="modalImg" data-target="fireflyModal"
+							src="images/Firefly/Coastal-Seamless-Gutters.jpg" style="padding:2rem;width:30rem;">
 					</div>
 				</div>
 			</div>
@@ -252,7 +285,8 @@
 			<div class="row">
 				<div class="cell-cent">
 					<div style="display:flex;justify-content:center;align-content:center;">
-						<img class="modalImg" data-target="photoModal" src="images/Photography/Moth-Mortar.jpg" style="padding:2rem;height:30rem;">
+						<img class="modalImg" data-target="photoModal" src="images/Photography/Moth-Mortar.jpg"
+							style="padding:2rem;height:30rem;">
 					</div>
 					<h2 class="txt-cent font-wht" style="align-self:center;padding-bottom:1rem;">Photography</h2>
 					<p class="fs-300 txt-cent font-wht" style="padding:0 2rem;">
@@ -262,11 +296,13 @@
 			</div>
 		</div>
 	</div>
-		<footer class="bg-dkgrn">
+	<footer class="bg-dkgrn">
 		<div class="container" style="padding:1rem 0;display:grid;">
-			<div style="display:grid;grid-template-columns:fit-content(220px) 1fr;width:30%;justify-self:center;justify-content: center;">
-				<p class="font-wht txt-cent" style="align-self:center;">Maya Toole - Created 2025</p>
-				<a href="https://www.linkedin.com/in/maya-toole-6baa64374/" style="display:grid;justify-content:center;">
+			<div
+				style="display:grid;grid-template-columns:fit-content(220px) 1fr;width:30%;justify-self:center;justify-content: center;">
+				<p class="font-wht txt-cent" style="align-self:center;">Maya Toole - Created 2025<br>v 1.0.0</p>
+				<a href="https://www.linkedin.com/in/maya-toole-6baa64374/"
+					style="display:grid;justify-content:center;">
 					<img src="images/icons/LinkedIn.png" style="height:4rem;">
 				</a>
 			</div>

@@ -110,7 +110,6 @@ function initMothTrail() {
 		trail.forEach((dot) => {
 			dot.el.remove();
 		});
-		document.getElementById("reduceAnimations").querySelector("p").textContent = "Enable Animations";
 		mothActive = false;
 	};
 };
@@ -184,7 +183,6 @@ window.addEventListener("resize", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const redAni = document.getElementById("reduceAnimations");
-	const toggleText = redAni.querySelector("p");
 
 	redAni.addEventListener("click", () => {
 		if (mothActive || !document.body.classList.contains("no-animations")) {
@@ -192,7 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.body.classList.add("no-animations");
 			manualAnimationDisable = true;
 		} else {
-			toggleText.textContent = "Disable Animations";
 			document.body.classList.remove("no-animations");
 			manualAnimationDisable = false;
 

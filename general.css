@@ -395,13 +395,20 @@ select {
 
 .navMenu {
 	display: grid;
-	grid-template-columns: 50% 50%;
-	width: 20rem;
+	grid-template-columns: 25% 37.5% 37.5%;
+	width: 30rem;
 	height: 80%;
 	z-index: 11;
 	margin-right: 2rem;
 	gap: 0 0.5rem;
 
+}
+
+.navRow {
+	display:grid;
+	height:75%;
+	grid-template-rows:1fr 1fr;
+	align-self:center;
 }
 
 .navBtn {
@@ -415,10 +422,40 @@ select {
 	border: 0.25rem solid rgb(var(--clr-ltgrn));
 	border-radius: 2rem;
 	text-align: center;
+	transition: 0.2s;
+}
+
+.navBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .navBtn a {
 	font-size: var(--fs-500);
+}
+
+.imgBtn {
+	transition:0.2s;
+}
+.imgBtn::after {
+	border: none;
+}
+.imgBtn:hover {
+	transform:scale(1.05);
+	border: none;
+}
+
+.contactInfo {
+	display:grid;
+	grid-template-rows:auto 1fr 1fr 1fr;
+	justify-self:start;
+	align-self:center;
+	row-gap:1rem;
+	height:728px;
+}
+.contactInfo > a {
+	display:grid;
+	justify-content:start;
 }
 
 @media all and (max-width: 1050px) {
@@ -461,13 +498,27 @@ select {
 	}
 
 	.navMenu {
-		width: 12rem;
+		width:30rem;
 		gap: 0 0.5rem;
+	}
+
+	.navRow {
+		grid-template-rows: 1fr;
 	}
 
 	.navBtn a {
 		font-size: var(--fs-400);
 	}
+
+	#reduceAnimations {
+		display:none;
+	}
+	.contactInfo {
+		justify-self:center;
+	}
+	.contactInfo > a {
+	justify-content:center;
+}
 }
 
 .section-header {
