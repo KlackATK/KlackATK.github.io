@@ -110,6 +110,10 @@ select {
     }
 }
 
+a {
+    text-decoration:none;
+}
+
 /*----- End Reset -----*/
 
 /*----- General Utility Classes -----*/
@@ -629,4 +633,5 @@ select {
 
 .no-animations * {
     animation: none !important;
+
 }
