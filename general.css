@@ -299,6 +299,10 @@ a {
 
 /*----- End Typography -----*/
 
+mark {
+	background-color: rgb(var(--clr-ltgrn));
+}
+
 .section {
 	margin-top: 2rem;
 	position: relative;
@@ -609,4 +613,5 @@ a {
 #buffer {
 	transition: 0.4s;
 }
+
 
