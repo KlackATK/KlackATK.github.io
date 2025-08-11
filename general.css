@@ -382,6 +382,10 @@ mark {
 	width: 45%;
 }
 
+.section-header.mobile {
+	display:none;
+}
+
 .cell {
 	align-content: start;
 	grid-column: span 2;
@@ -505,6 +509,10 @@ mark {
 		margin-inline-start: auto;
 	}
 
+	.section-header.mobile {
+		display:block;
+	}
+
 	.navMenu {
 		width:30rem;
 		gap: 0 0.5rem;
@@ -613,5 +621,6 @@ mark {
 #buffer {
 	transition: 0.4s;
 }
+
 
 
