@@ -54,7 +54,7 @@
     grid-column: span 2;
 }
 
-@media screen and (max-width: 1036px) {
+@media screen and (max-width: 1050px) {
     .col2 {
         grid-column: span 1;
     }
@@ -62,15 +62,13 @@
     .mc-row > img {
         width: 75%;
     }
-}
 
-@media screen and (max-width: 1200px) {
-  .image-gallery {
+	.image-gallery {
     columns: 3;
-  }
+ 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .image-gallery {
     columns: 2;
   }
@@ -145,5 +143,6 @@
 	 opacity:1
 	}
 }
+
 
 
