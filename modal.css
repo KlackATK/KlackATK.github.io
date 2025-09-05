@@ -64,6 +64,25 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+  .image-gallery {
+    columns: 3;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .image-gallery {
+    columns: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-gallery {
+    columns: 1;
+  }
+}
+
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;
@@ -126,4 +145,5 @@
 	 opacity:1
 	}
 }
+
 
