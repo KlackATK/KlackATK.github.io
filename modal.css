@@ -30,6 +30,17 @@
   justify-content: center;
 } 
 
+.image-gallery {
+	columns: 3;
+	column-gap: 16px;
+	margin: 1rem;
+}
+
+.image-card {
+	position: relative;
+	margin-bottom: 16px;
+}
+
 /* Modal Content (image grid) */
 .mc-row {
     display: grid;
@@ -115,3 +126,4 @@
 	 opacity:1
 	}
 }
+
